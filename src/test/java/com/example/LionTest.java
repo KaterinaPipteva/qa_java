@@ -6,17 +6,16 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.mockito.Spy;
-
 import java.util.ArrayList;
 import java.util.List;
 
 @RunWith(Parameterized.class)
 public class LionTest {
 
-    @Spy
+    @Mock
     Feline feline;
 
     private String sex;
@@ -49,15 +48,6 @@ public class LionTest {
         assertEquals(hasManeExpected, actual);
     }
 
-
-@Test
-    public void lionConstructorGetException() throws Exception{
-    try {
-        Lion lion = new Lion("Интерсекс", feline);
-    } catch (Exception e) {
-        assertEquals("Используйте допустимые значения пола животного - самец или самка", e.getMessage());
-    }
-}
 
 @Test
     public void getKittensReturnNumberOfKittens() throws Exception{

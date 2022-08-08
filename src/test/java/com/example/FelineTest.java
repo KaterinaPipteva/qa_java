@@ -35,8 +35,7 @@ public class FelineTest {
         Feline feline = new Feline();
         //в этом тесте конечно тоже можно было применить параметризацию, но решила применить ее для Lion класса
         int expected = 33;
-        int argument = 33;
-        int actual = feline.getKittens(argument);
+        int actual = feline.getKittens(expected);
         assertEquals(expected, actual);
     }
 }
